@@ -140,75 +140,319 @@
 
 // });
 
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import React from 'react';
+// import { View, Text, StyleSheet, ScrollView } from 'react-native';
+// import React from 'react';
+
+// const App = () => {
+//   return (
+//     <ScrollView
+//       contentContainerStyle={{ gap: 10 }}
+//       // horizontal
+//       style={styles.container}
+//     >
+//       {/* <Text>App</Text> */}
+//       <View style={styles.box1}></View>
+//       <View style={styles.box2}></View>
+//       <View style={styles.box3}></View>
+//       {/* <View style={styles.box1}></View>
+//       <View style={styles.box2}></View>
+//       <View style={styles.box3}></View>
+//       <View style={styles.box1}></View>
+//       <View style={styles.box2}></View>
+//       <View style={styles.box3}></View>
+//       <View style={styles.box1}></View>
+//       <View style={styles.box2}></View>
+//       <View style={styles.box3}></View>
+//       <View style={styles.box1}></View>
+//       <View style={[styles.box2, { backgroundColor: 'purple' }]}></View>
+//       <View style={[styles.box3, { backgroundColor: 'skyblue' }]}></View> */}
+//     </ScrollView>
+//   );
+// };
+
+// export default App;
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     // backgroundColor: "black",
+//     // flexDirection: 'row-reverse'
+//     // flexDirection: 'row',
+
+//     // justifyContent: 'center',
+//     // alignItems: 'center',
+//     // alignContent: 'center',
+//     // flexWrap: 'wrap',
+//     backgroundColor: 'black',
+//     padding: 10,
+//     borderRadius: 50,
+//   },
+
+//   box1: {
+//     // flex: 1,
+//     height: 80,
+//     width: 80,
+//     backgroundColor: 'red',
+//     borderRadius: 50,
+//     // alignSelf: 'flex-start'
+//   },
+//   box2: {
+//     // flex: 1,
+//     height: 80,
+//     width: 80,
+//     // flexGrow: 1,
+//     backgroundColor: 'yellow',
+//     borderRadius: 50,
+//   },
+//   box3: {
+//     // flex: 1,
+//     height: 80,
+//     width: 80,
+//     backgroundColor: 'blue',
+//     borderRadius: 50,
+//   },
+// });
+
+// import { View, Text, StyleSheet, Image, FlatList } from 'react-native';
+
+// const dummy = [
+//   {
+//     id: 1,
+//     name: 'Dwaipayan',
+//     email: 'd@gmail.com',
+//     image: 'https://randomuser.me/api/portraits/men/1.jpg',
+//   },
+//   {
+//     id: 2,
+//     name: 'Amit',
+//     email: 'amit@example.com',
+//     image: 'https://randomuser.me/api/portraits/men/2.jpg',
+//   },
+//   {
+//     id: 3,
+//     name: 'Priya',
+//     email: 'priya@example.com',
+//     image: 'https://randomuser.me/api/portraits/women/3.jpg',
+//   },
+//   {
+//     id: 4,
+//     name: 'Rahul',
+//     email: 'rahul@example.com',
+//     image: 'https://randomuser.me/api/portraits/men/4.jpg',
+//   },
+//   {
+//     id: 5,
+//     name: 'Sneha',
+//     email: 'sneha@example.com',
+//     image: 'https://randomuser.me/api/portraits/women/5.jpg',
+//   },
+//   {
+//     id: 6,
+//     name: 'Ravi',
+//     email: 'ravi@example.com',
+//     image: 'https://randomuser.me/api/portraits/men/6.jpg',
+//   },
+//   {
+//     id: 7,
+//     name: 'Anjali',
+//     email: 'anjali@example.com',
+//     image: 'https://randomuser.me/api/portraits/women/7.jpg',
+//   },
+//   {
+//     id: 8,
+//     name: 'Manish',
+//     email: 'manish@example.com',
+//     image: 'https://randomuser.me/api/portraits/men/8.jpg',
+//   },
+//   {
+//     id: 9,
+//     name: 'Kiran',
+//     email: 'kiran@example.com',
+//     image: 'https://randomuser.me/api/portraits/men/9.jpg',
+//   },
+//   {
+//     id: 10,
+//     name: 'Megha',
+//     email: 'megha@example.com',
+//     image: 'https://randomuser.me/api/portraits/women/10.jpg',
+//   },
+//   {
+//     id: 11,
+//     name: 'Sanjay',
+//     email: 'sanjay@example.com',
+//     image: 'https://randomuser.me/api/portraits/men/11.jpg',
+//   },
+//   {
+//     id: 12,
+//     name: 'Divya',
+//     email: 'divya@example.com',
+//     image: 'https://randomuser.me/api/portraits/women/12.jpg',
+//   },
+//   {
+//     id: 13,
+//     name: 'Nikhil',
+//     email: 'nikhil@example.com',
+//     image: 'https://randomuser.me/api/portraits/men/13.jpg',
+//   },
+//   {
+//     id: 14,
+//     name: 'Shreya',
+//     email: 'shreya@example.com',
+//     image: 'https://randomuser.me/api/portraits/women/14.jpg',
+//   },
+//   {
+//     id: 15,
+//     name: 'Ajay',
+//     email: 'ajay@example.com',
+//     image: 'https://randomuser.me/api/portraits/men/15.jpg',
+//   },
+//   {
+//     id: 16,
+//     name: 'Neha',
+//     email: 'neha@example.com',
+//     image: 'https://randomuser.me/api/portraits/women/16.jpg',
+//   },
+//   {
+//     id: 17,
+//     name: 'Rakesh',
+//     email: 'rakesh@example.com',
+//     image: 'https://randomuser.me/api/portraits/men/17.jpg',
+//   },
+//   {
+//     id: 18,
+//     name: 'Isha',
+//     email: 'isha@example.com',
+//     image: 'https://randomuser.me/api/portraits/women/18.jpg',
+//   },
+//   {
+//     id: 19,
+//     name: 'Vikram',
+//     email: 'vikram@example.com',
+//     image: 'https://randomuser.me/api/portraits/men/19.jpg',
+//   },
+//   {
+//     id: 20,
+//     name: 'Tanvi',
+//     email: 'tanvi@example.com',
+//     image: 'https://randomuser.me/api/portraits/women/20.jpg',
+//   },
+//   {
+//     id: 21,
+//     name: 'Arjun',
+//     email: 'arjun@example.com',
+//     image: 'https://randomuser.me/api/portraits/men/21.jpg',
+//   },
+//   {
+//     id: 22,
+//     name: 'Pooja',
+//     email: 'pooja@example.com',
+//     image: 'https://randomuser.me/api/portraits/women/22.jpg',
+//   },
+// ];
+
+// const App = () => {
+//   return (
+//     <View style={styles.container}>
+//       <FlatList
+//         data={dummy}
+//         renderItem={({ item }) => (
+//           <View style={styles.card}>
+//             <Image
+//               style={{ width: 40, height: 40, borderRadius: 50 }}
+//               source={{uri: item.image}}
+//             />
+//             <Text>{item.name}</Text>
+//             <Text style = {{textAlign: 'center', overflow: 'hidden', fontSize: 9}}>{item.email}</Text>
+//           </View>
+//         )}
+//         keyExtractor={item => item.id.toString()}
+//         ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
+//         numColumns={2}
+//         columnWrapperStyle = {{gap: 10, }}
+//         //justifyContent: 'space-around'
+//       />
+//     </View>
+//   );
+// };
+
+// export default App;
+
+// const styles = StyleSheet.create({
+//   container: {
+//     height: '100%',
+//     width: '100%',
+//     backgroundColor: '#dadada',
+//     paddingHorizontal: 20,
+//     paddingVertical: 10,
+//   },
+
+//   card: {
+//     width: 100,
+//     height: 100,
+//     backgroundColor: 'white',
+//     borderRadius: 10,
+//     padding: 5,
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//     // gap: 10,
+//     // margin: 5,
+//   },
+// });
+
+//Hooks in ract native
+
+import { View, Text, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
 
 const App = () => {
+  const [count, setCount] = useState(0);
+
   return (
-    <ScrollView
-      contentContainerStyle={{ gap: 10 }}
-      horizontal
-      style={styles.container}
+    <View
+      style={{
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100%',
+        width: '100%',
+      }}
     >
-      {/* <Text>App</Text> */}
-      <View style={styles.box1}></View>
-      <View style={styles.box2}></View>
-      <View style={styles.box3}></View>
-      <View style={styles.box1}></View>
-      <View style={styles.box2}></View>
-      <View style={styles.box3}></View>
-      <View style={styles.box1}></View>
-      <View style={styles.box2}></View>
-      <View style={styles.box3}></View>
-      <View style={styles.box1}></View>
-      <View style={styles.box2}></View>
-      <View style={styles.box3}></View>
-      <View style={styles.box1}></View>
-      <View style={[styles.box2, { backgroundColor: 'purple' }]}></View>
-      <View style={[styles.box3, { backgroundColor: 'skyblue' }]}></View>
-    </ScrollView>
+      <Text style={{ color: 'red', fontSize: 20 }}>Count: {count}</Text>
+
+      <TouchableOpacity
+        onPress={() => {
+          if (count < 10) {
+            setCount(count + 1);
+          }
+        }}
+        style={{
+          padding: 10,
+          backgroundColor: 'orange',
+          borderRadius: 8,
+          marginBottom: 10,
+          opacity: 1,
+        }}
+        // activeOpacity={0}
+      >
+        <Text style={{ color: 'white' }}>Increment</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          if (count > 0) {
+            setCount(count - 1);
+          }
+        }}
+        style={{
+          padding: 10,
+          backgroundColor: 'orange',
+          borderRadius: 8,
+          opacity: 1,
+        }}
+        // activeOpacity={0}
+      >
+        <Text style={{ color: 'white' }}>Decrement</Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 
 export default App;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    // backgroundColor: "black",
-    // flexDirection: 'row-reverse'
-    // flexDirection: 'row',
-
-    // justifyContent: 'center',
-    // alignItems: 'center',
-    // alignContent: 'center',
-    // flexWrap: 'wrap',
-    backgroundColor: 'black',
-    padding: 10,
-    borderRadius: 50,
-  },
-
-  box1: {
-    // flex: 1,
-    height: 80,
-    width: 80,
-    backgroundColor: 'red',
-    borderRadius: 50,
-    // alignSelf: 'flex-start'
-  },
-  box2: {
-    // flex: 1,
-    height: 80,
-    width: 80,
-    // flexGrow: 1,
-    backgroundColor: 'yellow',
-    borderRadius: 50,
-  },
-  box3: {
-    // flex: 1,
-    height: 80,
-    width: 80,
-    backgroundColor: 'blue',
-    borderRadius: 50,
-  },
-});
