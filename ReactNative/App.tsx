@@ -2,6 +2,8 @@
 
 // import React from 'react';
 
+//useState
+
 // const App = () => {
 
 //   const theme = useColorScheme();
@@ -401,58 +403,160 @@
 
 //Hooks in ract native
 
-import { View, Text, TouchableOpacity } from 'react-native';
-import React, { useState } from 'react';
+// import { View, Text, TouchableOpacity } from 'react-native';
+// import React, { useState } from 'react';
 
-const App = () => {
-  const [count, setCount] = useState(0);
+// const App = () => {
+//   const [count, setCount] = useState(0);
 
-  return (
-    <View
-      style={{
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100%',
-        width: '100%',
-      }}
-    >
-      <Text style={{ color: 'red', fontSize: 20 }}>Count: {count}</Text>
+//   return (
+//     <View
+//       style={{
+//         justifyContent: 'center',
+//         alignItems: 'center',
+//         height: '100%',
+//         width: '100%',
+//       }}
+//     >
+//       <Text style={{ color: 'red', fontSize: 20 }}>Count: {count}</Text>
 
-      <TouchableOpacity
-        onPress={() => {
-          if (count < 10) {
-            setCount(count + 1);
-          }
-        }}
-        style={{
-          padding: 10,
-          backgroundColor: 'orange',
-          borderRadius: 8,
-          marginBottom: 10,
-          opacity: 1,
-        }}
-        // activeOpacity={0}
-      >
-        <Text style={{ color: 'white' }}>Increment</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => {
-          if (count > 0) {
-            setCount(count - 1);
-          }
-        }}
-        style={{
-          padding: 10,
-          backgroundColor: 'orange',
-          borderRadius: 8,
-          opacity: 1,
-        }}
-        // activeOpacity={0}
-      >
-        <Text style={{ color: 'white' }}>Decrement</Text>
-      </TouchableOpacity>
-    </View>
-  );
-};
+//       <TouchableOpacity
+//         onPress={() => {
+//           if (count < 10) {
+//             setCount(count + 1);
+//           }
+//         }}
+//         style={{
+//           padding: 10,
+//           backgroundColor: 'orange',
+//           borderRadius: 8,
+//           marginBottom: 10,
+//           opacity: 1,
+//         }}
+//         // activeOpacity={0}
+//       >
+//         <Text style={{ color: 'white' }}>Increment</Text>
+//       </TouchableOpacity>
+//       <TouchableOpacity
+//         onPress={() => {
+//           if (count > 0) {
+//             setCount(count - 1);
+//           }
+//         }}
+//         style={{
+//           padding: 10,
+//           backgroundColor: 'orange',
+//           borderRadius: 8,
+//           opacity: 1,
+//         }}
+//         // activeOpacity={0}
+//       >
+//         <Text style={{ color: 'white' }}>Decrement</Text>
+//       </TouchableOpacity>
+//     </View>
+//   );
+// };
 
-export default App;
+// export default App;
+
+
+// import { View, Text, StyleSheet, FlatList, SafeAreaView, Image } from 'react-native'
+// import React, {useEffect, useState} from 'react'
+
+
+// interface Item {
+//   id: number
+//   title: string
+//   body: string
+//   url: string
+// }
+
+// const App = () => {
+
+//   const[data, setData] = useState<Item[] | null>(null);
+
+//   useEffect(()=> {
+//     fetch("https://jsonplaceholder.typicode.com/photos")
+//     .then((res) => res.json())
+//     .then((json : Item[])=> {
+//       console.log('====================================');
+//       console.log("Fetched Data", json);
+//       console.log('====================================');
+//       setData(json);
+//     });
+//   }, []);
+
+//   return (
+//     // <View style = {{justifyContent: 'center', alignItems: 'center', flex: 1, backgroundColor: 'gray'}}>
+//     //   <Text style = {{color: 'blue', fontSize: 36}}>
+//     //     {data ? JSON.stringify(data) : 'Loading...'}
+//     //   </Text>
+//     // </View>
+
+//     <SafeAreaView style = {[styles.container, {paddingTop: 40}]}>
+//       {data? (
+//       <FlatList
+//         data={data}
+//         keyExtractor={(item) => item.id.toString()}
+//         renderItem={({item}) => (
+//           <View style = {styles.container}>
+//             <Text style = {styles.title}>{item.title}</Text>
+//             {/* <Text style = {styles.item}>{item.body}</Text> */}
+//             <Image
+//             height={200}
+//             width={300}
+//             source={{uri: item.url}}
+//             />
+//           </View>
+//         )}
+//       />
+//        ) : (
+//       <Text style = {styles.loading}>Loading...</Text>
+//     )}
+//     </SafeAreaView>
+
+//   )
+// }
+
+// export default App
+
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#333',
+//     paddingHorizontal: 16,
+//     paddingVertical: 14
+
+//   },
+//   loading: {
+
+//     fontSize: 14,
+//     textAlign: 'center',
+//     marginTop: 20
+
+//   },
+//   title: {
+//     fontWeight: 'bold',
+//     color: 'white',
+//     marginBottom: 4,
+//     fontSize: 15,
+//     paddingBottom: 5
+//   },
+//   item: {
+
+//     backgroundColor:'white',
+//     borderRadius: 16,
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     padding: 8,
+
+//   },
+
+// })
+
+
+
+
+
+
